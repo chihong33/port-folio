@@ -16,6 +16,9 @@
                         Design, Develop and optimize existing Restful Web API using Yii2 Framework
                     </li>
                     <li>
+                        Design, Develop and publish WeChat Mini app for China Customer
+                    </li>
+                    <li>
                         Train AI model for smart fridge object detection using YOLOv5 object detection algorithm on Google Cloud Platform
                     </li>
                 </ul>
