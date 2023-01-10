@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/download_resume', function () {
+    return response()->make(file_get_contents(storage_path('app/CV.pdf')), 200, [
+        'content-type'=>'application/pdf',
+    ]);
 });
 
 Auth::routes();

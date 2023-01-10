@@ -21,7 +21,7 @@
                     </p>
                     <ul class="flex flex-wrap items-center">
                         <li>
-                            <a href="javascript:void(0)" class="
+                            <a href="/download_resume" target="_blank" class="
                                 py-4
                                 px-6
                                 sm:px-10
