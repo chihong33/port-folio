@@ -206,6 +206,7 @@
         <x-home.about></x-home.about>
         <x-home.work-experience></x-home.work-experience>
         <x-home.call-to-action></x-home.call-to-action>
+        <x-home.portfolio></x-home.portfolio>
         <!-- ====== Navbar Section Start -->
         <x-layout.navbar></x-layout.navbar>
         <!--======Navbar Section End -->
