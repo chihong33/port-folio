@@ -1,16 +1,16 @@
-
-<section 
-    id="portfolio"
-    x-data="
+<!-- ====== Portfolio Section Start -->
+<section
+  id="portfolio"
+  x-data="
         {
-            selectedTabs: 'all',
-            activeClasses: 'bg-primary text-white',
-            inactiveClasses: 'text-body-color hover:bg-primary hover:text-white'        
+          selectedTab: 'all',
+          activeClasses: 'bg-primary text-white',
+          inactiveClasses: 'text-body-color hover:bg-primary hover:text-white',
         }
-    "
-    class="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px] "
+      "
+  class="pt-20 lg:pt-[120px] pb-12 lg:pb-[90px]"
 >
-<div class="container">
+  <div class="container">
     <div class="flex flex-wrap -mx-4">
       <div class="w-full px-4">
         <div class="text-center mx-auto mb-[60px] max-w-[510px]">
@@ -57,5 +57,6 @@
         </x-portfolio-item>
       @endforeach
     </div>
-</div>
+  </div>
 </section>
+<!-- ====== Portfolio Section End -->
