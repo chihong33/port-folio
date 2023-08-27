@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class PortfolioItem extends Component
+class ProjectItem extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class PortfolioItem extends Component
      */
     public function render()
     {
-        return view('components.portfolio-item');
+        return view('components.project-item');
     }
 }

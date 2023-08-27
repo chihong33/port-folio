@@ -8,7 +8,7 @@
       <div class="rounded-lg overflow-hidden ease-in duration-100 hover:scale-105">
         <img
           src="{{ $image }}"
-          alt="portfolio"
+          alt="project"
           class="w-full h-[260px] object-cover"
         />
       </div>
