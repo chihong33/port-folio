@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "alpinejs": "^3.10.2",
+        "flowbite": "^1.8.1",
         "in-view": "^0.6.1",
         "tailwindcss": "^3.1.2",
         "tw-elements": "^1.0.0-alpha12"

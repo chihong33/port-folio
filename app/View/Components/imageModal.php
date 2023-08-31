@@ -2,20 +2,18 @@
 
 namespace App\View\Components;
 
-use Illuminate\Support\Facades\Storage;
 use Illuminate\View\Component;
 
-class ProjectItem extends Component
+class imageModal extends Component
 {
-    public array $image_arr;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(public string $title, public array $categories, public string $imageDir, public string $github)
+    public function __construct()
     {
-        $this->image_arr = Storage::allFiles($imageDir);
+        //
     }
 
     /**
@@ -25,6 +23,6 @@ class ProjectItem extends Component
      */
     public function render()
     {
-        return view('components.project-item');
+        return view('components.image-modal');
     }
 }

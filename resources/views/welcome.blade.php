@@ -210,6 +210,11 @@
         <x-home.projects></x-home.projects>
         <x-layout.footer></x-layout.footer>
     </div>
+
+    <div id="popup-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"> -->
+        <x-image-modal></x-image-modal>
+    </div>
+
     <script src="{{ asset('js/app.js') }}"></script>
 
     <script>

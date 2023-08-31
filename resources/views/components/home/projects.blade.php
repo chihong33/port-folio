@@ -1,4 +1,3 @@
-<!-- ====== project Section Start -->
 <section
   id="project"
   data-bg-color="#1e293b"
@@ -49,13 +48,9 @@
     </div>
     <div class="flex flex-wrap -mx-4">
       @foreach ($items as $item)
-        <x-project-item :title="$item['title']"
-                          :categories="$item['category']"
-                          :image="$item['image']"
-                          :github="$item['github']">
+        <x-project-item :title="$item['title']" :categories="$item['category']" :image-dir="$item['image_dir']" :github="$item['github']">
         </x-project-item>
       @endforeach
     </div>
   </div>
 </section>
-<!-- ====== project Section End -->

@@ -22,35 +22,34 @@ class projects extends Component
             [
                 'category' => ['Laravel', 'Tailwind.css'],
                 'title' => 'Port Folio web app',
-                'image' => url('/img/test.jpg'),
+                'image_dir' => 'public/vendron_go',
                 'github' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s'
             ],
             [
                 'category' => ['Yii2', 'Jquery'],
                 'title' => 'Vendron Cloud',
-                'image' => url('/img/test.jpg'),
+                'image_dir' => 'public/vendron_go',
                 'github' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s'
             ],
             [
                 'category' => ['Flutter', 'Dart'],
                 'title' => 'Vendron Go',
-                'image' => url('/img/test.jpg'),
+                'image_dir' => 'public/vendron_go',
                 'github' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s'
             ],
             [
                 'category' => ['Flutter', 'Dart'],
                 'title' => 'Vendron OP',
-                'image' => url('/img/test.jpg'),
+                'image_dir' => 'public/vendron_go',
                 'github' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s'
             ],
             [
                 'category' => ['WeChat H3', 'Javascript'],
                 'title' => 'Wehchat mini app',
-                'image' => url('/img/test.jpg'),
+                'image_dir' => 'public/vendron_go',
                 'github' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s'
             ]
         ];
-
         $this->skill_tabs = array_unique(Arr::flatten(Arr::pluck($this->items, 'category')));
     }
 
