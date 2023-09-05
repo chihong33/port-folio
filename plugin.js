@@ -157,8 +157,8 @@ module.exports = plugin(
         colors: {
           dark: "#090E34",
           "dark-700": "#090e34b3",
-          primary: "#16E2F5",
-          secondary: "#13C296",
+          primary: "#07217f",
+          secondary: "#16E2F5",
           "body-color": "#637381",
           warning: "#F9C107",
           danger: "#DC3545",

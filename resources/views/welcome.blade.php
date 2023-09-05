@@ -228,7 +228,12 @@
         inView.threshold(0.5);
         inView('.section-container').on('enter', function(el) {
             var color = $(el).attr('data-bg-color');
+            var sectionHead = $(el).attr('data-section');
+
             $(".section-container").css('background-color', color);
+
+            $(".section_head").css('background-color', '');
+            $("."+sectionHead).css('background-color', '#002e79');
         });
     </script>
 </body>
