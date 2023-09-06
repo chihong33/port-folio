@@ -1,10 +1,10 @@
-<div class="relative pt-[120px] lg:pt-[150px] pb-[110px] section-container" data-bg-color="white" data-section="intro">
+<div class="relative pt-[120px] lg:pt-[150px] pb-[110px] section-container" data-bg-color="#1e293b" data-section="intro">
     <div class="container">
         <div class="flex flex-wrap -mx-4">
             <div class="w-full lg:w-5/12 px-4">
                 <div class="hero-content">
                     <h1 class="
-                        text-dark
+                        text-light
                         font-bold
                         text-4xl
                         sm:text-[42px]
@@ -15,7 +15,7 @@
                     ">
                         Hi! I'm Chi Hong!<br />
                     </h1>
-                    <p class="text-base mb-8 text-body-color max-w-[480px]">
+                    <p class="text-base mb-8 text-white max-w-[480px]">
                         I'm a full stack web developer with 2 years of experience on building web application and APIs.<br>
                         I'm experienced with Backend PHP MVC framework such as <strong>Laravel</strong> and <strong>Yii2</strong>.
                     </p>
@@ -32,8 +32,9 @@
                                 justify-center
                                 text-center text-base
                                 font-normal
-                                text-body-color
-                                hover:text-primary
+                                text-white
+                                transition 
+                                hover:scale-[1.1] ease-linear duration-100
                                 ">
                                 <span class="mr-2">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,11 +54,11 @@
                             text-xs
                             flex
                             items-center
-                            text-body-color
+                            text-white
                             mb-2
                         ">
                             Company that i used to work with
-                            <span class="w-8 h-[1px] bg-body-color inline-block ml-2"></span>
+                            <span class="w-8 h-[1px] bg-white inline-block ml-2"></span>
                         </h6>
                         <div class="flex items-center">
                             <div class="w-full py-3 mr-4 text-black">
@@ -110,6 +111,41 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="py-8 relative z-10 mt-8">
+        <div class="container">
+            <div class="flex flex-wrap justify-between">
+                <span class="inline-flex items-center text-xl">
+                    <img src="{{asset('img/social-reach.png')}}" width="12%" class="pr-4" alt="">
+                    Reach me via
+                </span>
+                <x-social-icons class="mb-0"></x-social-icons>
+            </div>
+        </div>
+        <div>
+            <span class="absolute left-0 bottom-0 z-[-1]">
+                <svg width="217" height="229" viewBox="0 0 217 229" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M-64 140.5C-64 62.904 -1.096 1.90666e-05 76.5 1.22829e-05C154.096 5.49924e-06 217 62.904 217 140.5C217 218.096 154.096 281 76.5 281C-1.09598 281 -64 218.096 -64 140.5Z" fill="url(#paint0_linear_1179_5)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_1179_5" x1="76.5" y1="281" x2="76.5" y2="1.22829e-05" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#3056D3" stop-opacity="0.08" />
+                            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </span>
+            <span class="absolute top-10 right-10 z-[-1]">
+                <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M37.5 -1.63918e-06C58.2107 -2.54447e-06 75 16.7893 75 37.5C75 58.2107 58.2107 75 37.5 75C16.7893 75 -7.33885e-07 58.2107 -1.63918e-06 37.5C-2.54447e-06 16.7893 16.7893 -7.33885e-07 37.5 -1.63918e-06Z" fill="url(#paint0_linear_1179_4)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_1179_4" x1="-1.63917e-06" y1="37.5" x2="75" y2="37.5" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#13C296" stop-opacity="0.31" />
+                            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </span>
         </div>
     </div>
 </div>

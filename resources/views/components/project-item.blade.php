@@ -10,7 +10,7 @@
           <div class="relative overflow-hidden rounded-lg md:h-96 border  dark:border-neutral-700 ">
             @foreach ($image_arr as $image)
               <div class="hidden duration-200 ease-linear" data-carousel-item>
-                  <img src="{{ Storage::url($image) }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 p-1" alt="...">
+                  <img src="{{ Storage::url($image) }}" data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 p-1" alt="...">
               </div>
             @endforeach
           </div>

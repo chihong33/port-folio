@@ -6,8 +6,8 @@
                      items-center
                      justify-center
                      rounded-full
-                     text-white
-                     hover:text-white hover:bg-primary hover:border-primary
+                     transition duration-300 ease-out hover:ease-in
+                     hover:text-white hover:bg-white hover:border-white
                      mr-3
                      sm:mr-4
                      lg:mr-3
@@ -52,8 +52,8 @@
                      items-center
                      justify-center
                      rounded-full
-                     text-white
-                     hover:text-white hover:bg-primary hover:border-primary
+                     transition duration-300 ease-out hover:ease-in
+                     hover:text-white hover:bg-white hover:border-white
                      mr-3
                      sm:mr-4
                      lg:mr-3
@@ -118,8 +118,8 @@
                      items-center
                      justify-center
                      rounded-full
-                     text-white
-                     hover:text-white hover:bg-primary hover:border-primary
+                     transition duration-300 ease-out hover:ease-in
+                     hover:text-white hover:bg-white hover:border-white
                      mr-3
                      sm:mr-4
                      lg:mr-3
