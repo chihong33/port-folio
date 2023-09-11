@@ -1,7 +1,9 @@
-// require('./bootstrap');
+
+require('./bootstrap');
+require('./components/projectModal');
+
 
 import Alpine from 'alpinejs';
-import 'flowbite';
 
 window.$ = window.jQuery = require('jquery')
 

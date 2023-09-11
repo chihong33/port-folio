@@ -6,13 +6,15 @@ module.exports = {
     './resources/**/*.blade.php',
     './resources/**/*.js',
     './resources/**/*.vue',
-    "./node_modules/flowbite/**/*.js"
+    "./node_modules/tw-elements/dist/js/**/*.js",
+    "./src/**/*.{html,js}",
+
   ],
   theme: {
     extend: {},
   },
   plugins: [
     require("./plugin"),
-    require('flowbite/plugin')
+    require("tw-elements/dist/plugin.cjs")
   ],
 }

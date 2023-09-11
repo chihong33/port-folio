@@ -18,7 +18,6 @@ class Navbar extends Component
             ['label' => "Intro", 'href' => "#intro"],
             ['label' => "Roadmap", 'href' => "#roadmap"],
             ['label' => "Project", 'href' => "#project"],
-            ['label' => "Contact", 'href' => "#contact"],
         ];
     }
 

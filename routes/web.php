@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ajaxController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,4 @@ Route::get('/download_resume', function () {
 
 Auth::routes();
 
+Route::get('/ajax/project_detail', [ajaxController::class, 'getProjectDetail']);

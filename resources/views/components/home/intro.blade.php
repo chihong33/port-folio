@@ -1,4 +1,4 @@
-<div class="relative pt-[120px] lg:pt-[150px] pb-[110px] section-container" data-bg-color="#1e293b" data-section="intro">
+<div class="relative pt-[120px] lg:pt-[150px] pb-[110px] section-container" data-bg-color="#1e293b" data-section="intro" id="intro">
     <div class="container">
         <div class="flex flex-wrap -mx-4">
             <div class="w-full lg:w-5/12 px-4">
