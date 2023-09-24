@@ -46,11 +46,15 @@
         </ul>
       </div>
     </div>
-    <div class="flex flex-wrap -mx-4">
-      @foreach ($items as $item)
-        <x-project-item :title="$item['title']" :categories="$item['category']" :image-dir="$item['image_dir']" :github="$item['github']">
-        </x-project-item>
-      @endforeach
-    </div>
+    <section >
+      <div class="container mx-auto">
+        <div class="-mx-4 flex flex-wrap justify-start">
+        @foreach ($items as $item)
+          <x-project-item :title="$item['title']" :categories="$item['category']" :image-dir="$item['image_dir']" :github="$item['github_link']">
+          </x-project-item>
+        @endforeach
+        </div>
+      </div>
+    </section>
   </div>
 </section>

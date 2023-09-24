@@ -8232,7 +8232,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   HelloReact: () => (/* binding */ HelloReact)
+/* harmony export */   CategoryBadges: () => (/* binding */ CategoryBadges),
+/* harmony export */   ImageCarousel: () => (/* binding */ ImageCarousel),
+/* harmony export */   LoadingImagePlaceholder: () => (/* binding */ LoadingImagePlaceholder),
+/* harmony export */   ModalBody: () => (/* binding */ ModalBody),
+/* harmony export */   ProjectActionButtons: () => (/* binding */ ProjectActionButtons),
+/* harmony export */   ProjectDescription: () => (/* binding */ ProjectDescription),
+/* harmony export */   ProjectResponsibility: () => (/* binding */ ProjectResponsibility),
+/* harmony export */   ProjectTitle: () => (/* binding */ ProjectTitle)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
@@ -8240,79 +8247,336 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var tw_elements__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tw-elements */ "./node_modules/tw-elements/dist/js/tw-elements.es.min.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
 
 
 
-function HelloReact(props) {
+
+
+
+function ModalBody(props) {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
+      _useState2 = _slicedToArray(_useState, 2),
+      loading = _useState2[0],
+      setLoading = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      error = _useState4[0],
+      setError = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState6 = _slicedToArray(_useState5, 2),
+      title = _useState6[0],
+      setTitle = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState8 = _slicedToArray(_useState7, 2),
+      description = _useState8[0],
+      setDescription = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState10 = _slicedToArray(_useState9, 2),
+      responsibilities = _useState10[0],
+      setResponsibility = _useState10[1];
+
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState12 = _slicedToArray(_useState11, 2),
+      categories = _useState12[0],
+      setCategories = _useState12[1];
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState14 = _slicedToArray(_useState13, 2),
+      imageList = _useState14[0],
+      setImageList = _useState14[1];
+
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState16 = _slicedToArray(_useState15, 2),
+      projectLink = _useState16[0],
+      setProjectLink = _useState16[1];
+
+  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+      _useState18 = _slicedToArray(_useState17, 2),
+      githubLink = _useState18[0],
+      setGithubLink = _useState18[1];
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    setLoading(true);
+    (0,tw_elements__WEBPACK_IMPORTED_MODULE_3__.initTE)({
+      PerfectScrollbar: tw_elements__WEBPACK_IMPORTED_MODULE_3__.PerfectScrollbar
+    });
+    setTimeout(function () {
+      fetch('/ajax/project_detail?name=' + props.project_name).then(function (response) {
+        return response.json();
+      }).then(function (result) {
+        console.log(result);
+        setTitle(result.title);
+        setCategories(result.category);
+        setImageList(result.image_list);
+        setDescription(result.description);
+        setResponsibility(result.responsibilities);
+        setGithubLink(result.github_link);
+        setProjectLink(result.project_link);
+        setLoading(false);
+      })["catch"](function (error) {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+        setError(true);
+      });
+    }, 0); // Simulate a 2-second API call
+  }, [props.project_name]);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    className: "pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "relative",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+        type: "button",
+        className: "z-[100] m-5 absolute box-content rounded-none border-none hover:no-underline hover:opacity-75 focus:opacity-100 focus:shadow-none focus:outline-none",
+        "data-te-modal-dismiss": true,
+        "aria-label": "Close",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
+          xmlns: "http://www.w3.org/2000/svg",
+          fill: "none",
+          viewBox: "0 0 24 24",
+          strokeWidth: "1.5",
+          stroke: "currentColor",
+          className: "h-6 w-6",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            d: "M6 18L18 6M6 6l12 12"
+          })
+        })
+      }), loading ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(LoadingImagePlaceholder, {}) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(ImageCarousel, {
+        image_list: imageList
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      className: "px-4 py-2 ".concat(loading ? "animate-pulse" : ""),
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(CategoryBadges, {
+        categories: categories,
+        isLoading: loading
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      className: "px-4 py-2 ".concat(loading ? "animate-pulse" : ""),
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(ProjectTitle, {
+        isLoading: loading,
+        title: title
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      "data-te-perfect-scrollbar-init": true,
+      className: "px-4 py-2 max-h-20 overflow-hidden relative",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(ProjectDescription, {
+        isLoading: loading,
+        description: description
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      "data-te-perfect-scrollbar-init": true,
+      className: "px-4 py-2 max-h-20 overflow-hidden relative",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(ProjectResponsibility, {
+        isLoading: loading,
+        responsibilities: responsibilities
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      className: "p-4 text-center",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(ProjectActionButtons, {
+        isLoading: loading,
+        github_link: githubLink,
+        project_link: projectLink
+      })
+    })]
+  });
+}
+function ProjectActionButtons(props) {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    (0,tw_elements__WEBPACK_IMPORTED_MODULE_3__.initTE)({
+      Popover: tw_elements__WEBPACK_IMPORTED_MODULE_3__.Popover,
+      Ripple: tw_elements__WEBPACK_IMPORTED_MODULE_3__.Ripple
+    }); //if the link is empty need show popover
+
+    if (!props.project_link) {
+      new tw_elements__WEBPACK_IMPORTED_MODULE_3__.Popover(document.getElementById('project_link_button'), {
+        content: "Project link unavailable",
+        trigger: "hover focus click",
+        placement: "left"
+      });
+    }
+
+    if (!props.github_link) {
+      new tw_elements__WEBPACK_IMPORTED_MODULE_3__.Popover(document.getElementById('github_link_button'), {
+        content: "Code unavailable",
+        trigger: "hover focus click",
+        placement: "right"
+      });
+    }
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+      id: "testing123",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+        type: "button",
+        "data-te-ripple-init": true,
+        "data-te-ripple-color": "dark",
+        disabled: !props.project_link,
+        id: "project_link_button",
+        className: "mx-2 inline-block rounded bg-neutral-50 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-800 shadow-[0_4px_9px_-4px_#cbcbcb] transition duration-150 ease-in-out hover:bg-neutral-100 hover:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] focus:bg-neutral-100 focus:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] focus:outline-none focus:ring-0 active:bg-neutral-200 active:shadow-[0_8px_9px_-4px_rgba(203,203,203,0.3),0_4px_18px_0_rgba(203,203,203,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(251,251,251,0.3)] dark:hover:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.1),0_4px_18px_0_rgba(251,251,251,0.05)] dark:focus:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.1),0_4px_18px_0_rgba(251,251,251,0.05)] dark:active:shadow-[0_8px_9px_-4px_rgba(251,251,251,0.1),0_4px_18px_0_rgba(251,251,251,0.05)]",
+        children: "View Project"
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
+      type: "button",
+      "data-te-ripple-init": true,
+      "data-te-ripple-color": "light",
+      disabled: !props.github_link,
+      id: "github_link_button",
+      className: "mx-2 inline-block rounded bg-neutral-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] transition duration-150 ease-in-out hover:bg-neutral-800 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-neutral-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] dark:bg-neutral-900 dark:shadow-[0_4px_9px_-4px_#030202] dark:hover:bg-neutral-900 dark:hover:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:focus:bg-neutral-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:active:bg-neutral-900 dark:active:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)]",
+      children: "View Code"
+    })]
+  });
+}
+function ProjectDescription(props) {
+  if (props.isLoading) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "animate-pulse",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "h-4 w-[30rem] rounded-full bg-gray-400 mb-2"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "h-4 w-[30rem] rounded-full bg-gray-400 "
+      })]
+    });
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+    className: "text-base font-light leading-relaxed",
+    children: props.description
+  });
+}
+function ProjectResponsibility(props) {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (!props.isLoading) {
+      console.log(props.responsibilities);
+    }
+  }, []);
+
+  if (props.isLoading) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      className: "animate-pulse",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "h-4 w-[30rem] rounded-full bg-gray-400 mb-2"
+      })
+    });
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("ul", {
+    className: "list-inside  list-disc",
+    children: props.responsibilities.map(function (item, index) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+        children: item
+      }, index);
+    })
+  }) // <p><em>Responsibility: {props.responsibilities}</em></p>
+  ;
+}
+function ProjectTitle(props) {
+  if (props.isLoading) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      className: "h-8 w-[20rem] rounded-full bg-gray-400 "
+    });
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+    className: "\r text-white\r font-bold\r text-3xl\r sm:text-[32px]\r leading-tight\r mb-6\r sm:mb-8\r lg:mb-0\r ",
+    children: props.title
+  });
+}
+function CategoryBadges(props) {
+  var categories_list = []; //dummy badge if state is loading
+
+  if (props.isLoading) {
+    categories_list.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+      className: "mr-2 w-10 h-4 inline-block whitespace-nowrap rounded-full px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-neutral-50 bg-gray-400"
+    }, 1));
+    categories_list.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+      className: "mr-2 w-10 h-4 inline-block whitespace-nowrap rounded-full px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-neutral-50 bg-gray-400"
+    }, 2));
+  } else {
+    props.categories.forEach(function (category) {
+      categories_list.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+        className: "mr-2 inline-block whitespace-nowrap rounded-full bg-neutral-800 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-neutral-50 dark:bg-neutral-900",
+        children: category
+      }, category));
+    });
+  }
+
+  return categories_list;
+}
+function ImageCarousel(props) {
+  var imageSize = '350px';
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    //init carousel after done render
+    (0,tw_elements__WEBPACK_IMPORTED_MODULE_3__.initTE)({
+      Carousel: tw_elements__WEBPACK_IMPORTED_MODULE_3__.Carousel,
+      LoadingManagement: tw_elements__WEBPACK_IMPORTED_MODULE_3__.LoadingManagement
+    });
+  }, []);
+  var image_list = [];
+
+  for (var i = 0; i < props.image_list.length; i++) {
+    image_list.push( /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", _objectSpread(_objectSpread({
+      className: "relative float-left h-[".concat(imageSize, "] -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none  ").concat(i === 0 ? '' : 'hidden')
+    }, i === 0 ? {
+      'data-te-carousel-active': true
+    } : null), {}, {
+      key: i,
+      "data-te-carousel-item": true,
+      style: {
+        backfaceVisibility: 'hidden'
+      }
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+      "data-te-lazy-load-init": true,
+      "data-te-lazy-src": "sample",
+      "data-te-lazy-delay": "5000",
+      "data-te-lazy-placeholder": "https://place-hold.it/1321x583?text=Loading",
+      "data-te-lazy-error": "https://place-hold.it/1321x583?text=Error",
+      src: props.image_list[i],
+      className: "blur-lg w-full left-0 right-0 top-0 bottom-0 m-auto h-[".concat(imageSize, "]")
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+      "data-te-lazy-load-init": true,
+      "data-te-lazy-src": "sample",
+      "data-te-lazy-delay": "5000",
+      "data-te-lazy-placeholder": "https://place-hold.it/1321x583?text=Loading",
+      "data-te-lazy-error": "https://place-hold.it/1321x583?text=Error",
+      src: props.image_list[i],
+      className: "absolute left-0 right-0 top-0 bottom-0 m-auto h-[".concat(imageSize, "]")
+    })));
+  }
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     id: "carouselExampleCaptions",
     className: "relative",
     "data-te-carousel-init": true,
     "data-te-ride": "carousel",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    "data-te-interval": "false",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: "relative w-full overflow-hidden after:clear-both after:block after:content-['']",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none",
-        "data-te-carousel-active": true,
-        "data-te-carousel-item": true,
-        style: {
-          backfaceVisibility: 'hidden'
-        },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-          src: "https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg",
-          className: "block w-full",
-          alt: "..."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
-            className: "text-xl",
-            children: "First slide label"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-            children: "Some representative placeholder content for the first slide."
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none",
-        "data-te-carousel-item": true,
-        style: {
-          backfaceVisibility: 'hidden'
-        },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-          src: "https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg",
-          className: "block w-full",
-          alt: "..."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
-            className: "text-xl",
-            children: "Second slide label"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-            children: "Some representative placeholder content for the second slide."
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none",
-        "data-te-carousel-item": true,
-        style: {
-          backfaceVisibility: 'hidden'
-        },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-          src: "https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg",
-          className: "block w-full",
-          alt: "..."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
-            className: "text-xl",
-            children: "Third slide label"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-            children: "Some representative placeholder content for the third slide."
-          })]
-        })]
-      })]
+      children: image_list
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("button", {
       className: "absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none",
       type: "button",
@@ -8364,27 +8628,38 @@ function HelloReact(props) {
     })]
   });
 }
-
-if (document.getElementById('intro')) {
-  jquery__WEBPACK_IMPORTED_MODULE_2___default().ajax({
-    type: "GET",
-    url: "/ajax/project_detail",
-    data: {
-      'name': 'Vendron op'
-    },
-    success: function success(response) {
-      console.log(response); // Handle the response
-
-      ;
-    }
-  });
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(HelloReact, {
-    testDate: "123123"
-  }), document.getElementById('intro'));
-  (0,tw_elements__WEBPACK_IMPORTED_MODULE_3__.initTE)({
-    Carousel: tw_elements__WEBPACK_IMPORTED_MODULE_3__.Carousel
+function LoadingImagePlaceholder() {
+  var imageSize = '350px';
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    id: "loading-custom-icon",
+    className: "w-full animate-puls h-[".concat(imageSize, "]"),
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      "data-te-loading-management-init": true,
+      "data-te-parent-selector": "#loading-custom-icon",
+      className: "absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] flex flex-col justify-center items-center z-40",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        "data-te-loading-icon-ref": true,
+        className: "inline-block h-8 w-8 animate-[spinner-grow_0.75s_linear_infinite] rounded-full bg-current opacity-0 motion-reduce:animate-[spinner-grow_1.5s_linear_infinite]",
+        role: "status"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+        "data-te-loading-text-ref": true,
+        className: "p-2",
+        children: "Loading..."
+      })]
+    })
   });
 }
+(0,tw_elements__WEBPACK_IMPORTED_MODULE_3__.initTE)({
+  Modal: tw_elements__WEBPACK_IMPORTED_MODULE_3__.Modal,
+  SmoothScroll: tw_elements__WEBPACK_IMPORTED_MODULE_3__.SmoothScroll
+});
+var myModal = new tw_elements__WEBPACK_IMPORTED_MODULE_3__.Modal(document.getElementById("projectDetailModal"));
+jquery__WEBPACK_IMPORTED_MODULE_2___default()('.project-modal').on('click', function () {
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(ModalBody, {
+    project_name: jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).data('app_name')
+  }), document.getElementById('projectDetailModalBody'));
+  myModal.show();
+});
 
 /***/ }),
 

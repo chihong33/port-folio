@@ -21,7 +21,6 @@ class projects extends Component
         //can add translation as feature
         $this->items = project::getListOfProjects();
         $this->skill_tabs = array_unique(Arr::flatten(Arr::pluck($this->items, 'category')));
-        project::getProjectData('Vendron OP');
     }
 
     /**

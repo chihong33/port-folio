@@ -1,52 +1,51 @@
-<div
-  x-data="{categories: {{ json_encode($categories) }} }"
-  :class="selectedTab == 'all' || categories.includes(selectedTab) ? 'block' : 'hidden' "
-  class="w-full md:w-1/2 xl:w-1/3 px-4"
->
-  <div class="relative mb-12">
-    <div class="rounded-lg overflow-hidden ease-in duration-100 hover:scale-105 ">
-      <div id="animation-carousel" class="relative w-full" data-carousel="static">
-          <!-- Carousel wrapper -->
-          <div class="relative overflow-hidden rounded-lg md:h-96 border  dark:border-neutral-700 ">
-            @foreach ($image_arr as $image)
-              <div class="hidden duration-200 ease-linear" data-carousel-item>
-                  <img src="{{ Storage::url($image) }}" data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 p-1" alt="...">
-              </div>
-            @endforeach
-          </div>
-          <!-- Slider controls -->
-          <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg class="w-4 h-4 text-white dark:text-white-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                  </svg>
-                  <span class="sr-only">Previous</span>
-              </span>
-          </button>
-          <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none " data-carousel-next>
-              <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg class="w-4 h-4 text-white dark:text-white-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                  </svg>
-                  <span class="sr-only">Next</span>
-              </span>
-          </button>
+<div data-app_name="{{$title}}" x-data="{categories: {{ json_encode($categories) }} }" :class="selectedTab == 'all' || categories.includes(selectedTab) ? 'block' : 'hidden' " class="relative min-h-[450px] project-modal cursor-pointer w-full px-4 md:w-1/2 xl:w-1/4 h-1/2 hover:scale-110 ease-in-out duration-150">
+  <div class="mx-auto mb-10 w-full max-w-[370px] h-auto">
+    <div class="relative overflow-hidden rounded-lg h-[350px]">
+      <!-- blurred base image as placeholder if the original image is too small -->
+      <img src="{{ Storage::url($image_arr[0]) }}" alt="image" class="blur-lg w-full h-[350px]" />
+      <img src="{{ Storage::url($image_arr[0]) }}" alt="image" class="absolute left-0 right-0 top-0 bottom-0 m-auto w-fulls z-10" />
+    </div>
+  </div>
+  <div class="absolute bottom-16 left-0 right-0 w-3/4 text-center z-500 m-auto z-[100]">
+    <div class="relative mx-5 overflow-hidden rounded-lg bg-white py-5 px-3">
+      <h3 class="text-dark text-base font-bold">{{ $title }}</h3>
+      @foreach($categories as $category)
+      <span class="inline-block whitespace-nowrap rounded-full bg-neutral-800 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-neutral-50 dark:bg-neutral-900">
+        {{$category}}
+      </span>
+      @endforeach
+
+      <div>
+        <span class="absolute left-0 bottom-0">
+          <svg width="61" height="30" viewBox="0 0 61 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="45" r="45" fill="#13C296" fill-opacity="0.11" />
+          </svg>
+        </span>
+        <span class="absolute top-0 right-0">
+          <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="0.706257" cy="24.3533" r="0.646687" transform="rotate(-90 0.706257 24.3533)" fill="#3056D3" />
+            <circle cx="6.39669" cy="24.3533" r="0.646687" transform="rotate(-90 6.39669 24.3533)" fill="#3056D3" />
+            <circle cx="12.0881" cy="24.3533" r="0.646687" transform="rotate(-90 12.0881 24.3533)" fill="#3056D3" />
+            <circle cx="17.7785" cy="24.3533" r="0.646687" transform="rotate(-90 17.7785 24.3533)" fill="#3056D3" />
+            <circle cx="0.706257" cy="18.6624" r="0.646687" transform="rotate(-90 0.706257 18.6624)" fill="#3056D3" />
+            <circle cx="6.39669" cy="18.6624" r="0.646687" transform="rotate(-90 6.39669 18.6624)" fill="#3056D3" />
+            <circle cx="12.0881" cy="18.6624" r="0.646687" transform="rotate(-90 12.0881 18.6624)" fill="#3056D3" />
+            <circle cx="17.7785" cy="18.6624" r="0.646687" transform="rotate(-90 17.7785 18.6624)" fill="#3056D3" />
+            <circle cx="0.706257" cy="12.9717" r="0.646687" transform="rotate(-90 0.706257 12.9717)" fill="#3056D3" />
+            <circle cx="6.39669" cy="12.9717" r="0.646687" transform="rotate(-90 6.39669 12.9717)" fill="#3056D3" />
+            <circle cx="12.0881" cy="12.9717" r="0.646687" transform="rotate(-90 12.0881 12.9717)" fill="#3056D3" />
+            <circle cx="17.7785" cy="12.9717" r="0.646687" transform="rotate(-90 17.7785 12.9717)" fill="#3056D3" />
+            <circle cx="0.706257" cy="7.28077" r="0.646687" transform="rotate(-90 0.706257 7.28077)" fill="#3056D3" />
+            <circle cx="6.39669" cy="7.28077" r="0.646687" transform="rotate(-90 6.39669 7.28077)" fill="#3056D3" />
+            <circle cx="12.0881" cy="7.28077" r="0.646687" transform="rotate(-90 12.0881 7.28077)" fill="#3056D3" />
+            <circle cx="17.7785" cy="7.28077" r="0.646687" transform="rotate(-90 17.7785 7.28077)" fill="#3056D3" />
+            <circle cx="0.706257" cy="1.58989" r="0.646687" transform="rotate(-90 0.706257 1.58989)" fill="#3056D3" />
+            <circle cx="6.39669" cy="1.58989" r="0.646687" transform="rotate(-90 6.39669 1.58989)" fill="#3056D3" />
+            <circle cx="12.0881" cy="1.58989" r="0.646687" transform="rotate(-90 12.0881 1.58989)" fill="#3056D3" />
+            <circle cx="17.7785" cy="1.58989" r="0.646687" transform="rotate(-90 17.7785 1.58989)" fill="#3056D3" />
+          </svg>
+        </span>
       </div>
     </div>
-
-
-
-    <div
-      class="text-center bg-white dark:bg-slate-900 relative z-20 py-9 px-3 rounded-lg drop-shadow-xl mx-7 -mt-[6rem]">
-      <span class="text-sm text-secondary font-semibold block mb-2">
-        {{ implode(", ", $categories) }}
-      </span>
-      <h3 class="font-bold text-lg text-dark dark:text-gray-300 mb-4">
-        {{ $title }}
-      </h3>
-      <x-button-link :href="$github" variant="outline-primary">View Details</x-button-link>
-    </div>
-
   </div>
-
 </div>
