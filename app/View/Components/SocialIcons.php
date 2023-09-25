@@ -18,7 +18,6 @@ class SocialIcons extends Component
      */
     public function __construct()
     {
-        $this->phone_no = '60164207769';
     }
 
     /**

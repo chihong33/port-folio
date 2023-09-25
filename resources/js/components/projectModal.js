@@ -166,7 +166,7 @@ export function ProjectResponsibility(props){
     return (
         <ul className="list-inside  list-disc">
             {props.responsibilities.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li className='italic' key={index}>{item}</li>
             ))}
         </ul>
         // <p><em>Responsibility: {props.responsibilities}</em></p>

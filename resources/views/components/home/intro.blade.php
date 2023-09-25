@@ -13,15 +13,14 @@
                         leading-snug
                         mb-3
                     ">
-                        Hi! I'm Chi Hong!<br />
+                        Hi! I'm {{$name}}!<br />
                     </h1>
                     <p class="text-base mb-8 text-white max-w-[480px]">
-                        I'm a full stack web developer with 2 years of experience on building web application and APIs.<br>
-                        I'm experienced with Backend PHP MVC framework such as <strong>Laravel</strong> and <strong>Yii2</strong>.
+                        {{$introduction}}
                     </p>
                     <ul class="flex flex-wrap items-center">
                         <li>
-                            <a href="/download_resume" target="_blank" class="
+                            <a href="{{$resume_link}}" target="_blank" class="
                                 py-4
                                 px-6
                                 sm:px-10
@@ -61,15 +60,13 @@
                             <span class="w-8 h-[1px] bg-white inline-block ml-2"></span>
                         </h6>
                         <div class="flex items-center">
-                            <div class="w-full py-3 mr-4 text-black">
-                                <img src="{{asset('img/silkron.png')}}" />
-                            </div>
-                            <!-- <div class="w-full py-3 mr-4">
-                                <img src="https://cdn.tailgrids.com/1.0/assets/images/brands/graygrids.svg" alt="graygrids" />
-                            </div>
-                            <div class="w-full py-3 mr-4">
-                                <img src="https://cdn.tailgrids.com/1.0/assets/images/brands/uideck.svg" alt="uideck" />
-                            </div> -->
+                            @foreach ($company_list as $company)
+                                <div class="w-full py-3 mr-4 text-black">                                       
+                                    <a href="{{$company['link']}}" target="_blank">
+                                        <img src="{{asset($company['image'])}}" />
+                                    </a>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -78,7 +75,7 @@
             <div class="w-full lg:w-6/12 px-4">
                 <div class="lg:text-right lg:ml-auto">
                     <div class="relative inline-block z-10 pt-11 lg:pt-0">
-                        <img src="https://cdn.tailgrids.com/1.0/assets/images/hero/hero-image-01.png" alt="hero" class="max-w-full lg:ml-auto" />
+                        <img src="{{asset($selfie_image)}}" alt="hero" class="h-[500px] lg:ml-auto rounded-tl-3xl" />
                         <span class="absolute -left-8 -bottom-8 z-[-1]">
                             <svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="2.5" cy="2.5" r="2.5" fill="#3056D3" />

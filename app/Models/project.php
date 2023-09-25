@@ -19,16 +19,16 @@ class project extends Model
                 'image_dir' => 'public/vendron_cloud',
                 'project_link' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s',
                 'github_link' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s',
-                'description' => "Vendron Cloud is a cloud based smart vending platform for operator to manage their machine on web portal. Its core feature is for operator to check machine status, generate sales report, restock, user management and inventory management.",
+                'description' => "Vendron Cloud is a cloud-based smart vending platform designed for operators to manage their vending machines through a web portal. Its core features include checking machine status, generating sales reports, restocking, user management and inventory management.",
                 'responsibilities' => ['Develop new feature and maintain existing functionality', 'Develop various APIs for machine and mobile app usage.']
             ],
             [
                 'category' => ['Flutter', 'Dart', 'PHP', 'Github', 'SVN'],
                 'title' => 'Vendron Go',
                 'image_dir' => 'public/vendron_go',
-                'project_link' => '',
-                'github_link' => '',
-                'description' => "Vendron GO is an mobile appication for user to make purchase and book an product in vending machine remotely. It also support multiple payment method to satisfy various end users.",
+                'project_link' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s',
+                'github_link' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s',
+                'description' => "Vendron GO is a mobile application that allows users to remotely view products inside vending machines, make purchases, and reserve products in vending machines. It also supports multiple payment methods to satisfy various end users from different country.",
                 'responsibilities' => ['Publish and manage app on Goolge and Apple app store', 'CI/CD on app and cloud APIs', 'Code base version control']
             ],
             [
@@ -37,7 +37,7 @@ class project extends Model
                 'image_dir' => 'public/vendron_op',
                 'project_link' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s',
                 'github_link' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s',
-                'description' => "Vendron OP is an mobile application for operator to manage their vending machine remotely. Its core feature include viweing sales report, machine status monitoring, manage machine remotely and restock. ",
+                'description' => "Vendron OP is a mobile application designed for operators to efficiently manage their machines remotely anywhere, anytime. Its core features include viewing sales reports, monitoring machine status, remote machine management, and restocking capabilities.",
                 'responsibilities' => ['Publish and manage app on Goolge and Apple app store', 'CI/CD on app and cloud APIs', 'Code base version control']
             ],
             [
@@ -46,7 +46,7 @@ class project extends Model
                 'image_dir' => 'public/yolov5',
                 'project_link' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s',
                 'github_link' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s',
-                'description' => "Utilize YOLOv5 to train an model to identify product inside smart fridge. The model that i trained has very high accuracy (anove 95%) even the product was placed in different lightining, position and angel. We train our model on Google Cloud Platform (GCP) so one of our of the challenging point is to set up an instance for our model tranining usage. Later after the model was trained, we visualize the accuracy on WandB and evaluate the model performance. ",
+                'description' => "I used YOLOv5 framework to train a model for identifying products inside a smart fridge. The model I trained achieved very high accuracy, consistently above 95%, even when products were placed in different lighting, positions, and angles. Model training were conducted on the Google Cloud Platform (GCP). After successfully training the model, I visualized its accuracy using WandB and evaluated its performance.",
                 'responsibilities' => ['Image labeling', 'Model training', 'Model evaluation', 'Deployment', 'GCP instance set up']
             ],
             [
@@ -55,7 +55,7 @@ class project extends Model
                 'image_dir' => 'public/bingshou',
                 'project_link' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s',
                 'github_link' => 'https://www.youtube.com/watch?v=JNhmEoBsZ48&t=5286s',
-                'description' => "冰兽传淇 is a Mini Program developed within the WeChat H5 framework. The prupose of this app is to allow users in china to purchase ice cream from vending machine remotely and make payment via wechat pay. It's very similar with Vendron GO except its in the wechat eco system.",
+                'description' => "冰兽传淇 is a Mini Program developed within the WeChat H5 framework. The purpose of this app is to enable users in China to remotely purchase ice cream from vending machines and make payments via WeChat Pay. It is very similar to Vendron GO, with the key difference being its integration within the WeChat ecosystem.",
                 'responsibilities' => ['Develop UI', 'Deploy and manage WeChat mini program']
             ]
         ];
@@ -71,8 +71,13 @@ class project extends Model
         });
         $image_list = [];
         foreach (Storage::allFiles($project_data['image_dir']) as $image) {
-            $project_data['image_list'][] = Storage::url($image);
+            $image_list[] = Storage::url($image);
         };
+        
+        //convert file name to number to sort it naturally
+        $project_data['image_list'] = collect($image_list)->sortBy(function ($filename) {
+                                            return (int)pathinfo($filename, PATHINFO_FILENAME);
+                                        })->values()->all();
         return $project_data;
     }
 }
