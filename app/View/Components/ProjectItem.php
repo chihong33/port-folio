@@ -14,7 +14,7 @@ class ProjectItem extends Component
      * @return void
      */
     public function __construct(public string $title, public array $categories, public string $imageDir, public string $github)
-    {
+    {   
         $this->image_arr = Storage::allFiles($imageDir);
     }
 
