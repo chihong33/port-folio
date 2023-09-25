@@ -3,6 +3,7 @@
 use App\Http\Controllers\ajaxController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/download_resume', function () {
-    return response()->make(file_get_contents(storage_path('app/CV.pdf')), 200, [
+    return response()->make(file_get_contents(public_path('pdf/resume.pdf')), 200, [
         'content-type'=>'application/pdf',
     ]);
 });
