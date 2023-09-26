@@ -16,6 +16,7 @@ Personal portfolio website built with:
 ```
 $ git https://github.com/chihong33/port-folio.git
 $ cd portfolio
+$ composer install
 $ npm i
 $ php artisan serve
 $ npm run dev
