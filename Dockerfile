@@ -6,7 +6,7 @@ WORKDIR /var/www
 # Add docker php ext repo
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
-# Install php extension
+# Install php extensions
 RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
     install-php-extensions mbstring pdo_mysql zip exif pcntl gd memcached
 
@@ -40,9 +40,7 @@ RUN groupadd -g 1000 www
 RUN useradd -u 1000 -ms /bin/bash -g www www
 
 # Copy code to /var/www
-COPY --chown=www:www . /var/www
-
-USER www
+COPY --chown=www:www-data . /var/www
 
 # add root to www group
 RUN chmod -R ug+w /var/www/storage
