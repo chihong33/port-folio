@@ -8,6 +8,7 @@ php artisan route:cache
 php artisan view:clear
 
 npm install
-npm run dev
+npm update
+npm run prod
 
 /usr/bin/supervisord -c /etc/supervisord.conf
