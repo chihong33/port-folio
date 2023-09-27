@@ -1,7 +1,7 @@
 FROM php:8.0-fpm
 
 # Set working directory
-WORKDIR /var/www
+WORKDIR /var/www/html
 
 # Add docker php ext repo
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
@@ -40,10 +40,10 @@ RUN groupadd -g 1000 www
 RUN useradd -u 1000 -ms /bin/bash -g www www
 
 # Copy code to /var/www
-COPY --chown=www:www-data . /var/www
+COPY --chown=www:www-data . /var/www/html
 
 # add root to www group
-RUN chmod -R 777 /var/www/storage
+RUN chmod -R 777 /var/www/html/storage
 
 # Copy nginx/php/supervisor configs
 RUN cp docker/supervisor.conf /etc/supervisord.conf
@@ -53,11 +53,11 @@ RUN cp docker/nginx.conf /etc/nginx/sites-enabled/default
 # PHP Error Log Files
 RUN mkdir /var/log/php
 RUN touch /var/log/php/errors.log && chmod 777 /var/log/php/errors.log
-RUN touch /var/www/storage/logs/laravel.log && chmod 777 /var/www/storage/logs/laravel.log 
+RUN touch /var/www/html/storage/logs/laravel.log && chmod 777 /var/www/html/storage/logs/laravel.log 
 
 # Deployment steps
 RUN composer install 
-RUN chmod +x /var/www/docker/run.sh
+RUN chmod +x /var/www/html/docker/run.sh
 
 EXPOSE 80
-ENTRYPOINT ["/var/www/docker/run.sh"]
+ENTRYPOINT ["/var/www/html/docker/run.sh"]
