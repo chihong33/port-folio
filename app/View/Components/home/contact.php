@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Components\home;
+namespace App\View\Components\Home;
 
 use Illuminate\View\Component;
 
-class contact extends Component
+class Contact extends Component
 {
     /**
      * Create a new component instance.

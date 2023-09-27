@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Components\home;
+namespace App\View\Components\Home;
 
 use Illuminate\View\Component;
 
-class intro extends Component
+class Intro extends Component
 {
     public string $name = "";
     public string $selfie_image = "";

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\home;
+namespace App\View\Components\Home;
 
 use App\Models\project;
 use Illuminate\Support\Arr;
 use Illuminate\View\Component;
 
-class projects extends Component
+class Projects extends Component
 {
     public array $items = [];
     public array $skill_tabs = [];
