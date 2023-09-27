@@ -43,7 +43,7 @@ RUN useradd -u 1000 -ms /bin/bash -g www www
 COPY --chown=www:www-data . /var/www
 
 # add root to www group
-RUN chmod -R ug+w /var/www/storage
+RUN chmod -R 775 /var/www/storage
 
 # Copy nginx/php/supervisor configs
 RUN cp docker/supervisor.conf /etc/supervisord.conf
@@ -53,6 +53,7 @@ RUN cp docker/nginx.conf /etc/nginx/sites-enabled/default
 # PHP Error Log Files
 RUN mkdir /var/log/php
 RUN touch /var/log/php/errors.log && chmod 777 /var/log/php/errors.log
+RUN touch /var/www/storage/logs/laravel.log && chmod 777 /var/www/storage/logs/laravel.log 
 
 # Deployment steps
 RUN composer install 
