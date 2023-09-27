@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /var/www
+cd /var/www/html
 
 # php artisan migrate:fresh --seed
 php artisan cache:clear
