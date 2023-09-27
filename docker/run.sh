@@ -7,4 +7,6 @@ php artisan cache:clear
 php artisan route:cache
 php artisan view:clear
 
+composer dump 
+
 /usr/bin/supervisord -c /etc/supervisord.conf
