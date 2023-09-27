@@ -7,6 +7,7 @@ php artisan cache:clear
 php artisan route:cache
 php artisan view:clear
 
-composer dump 
+npm install
+npm run dev
 
 /usr/bin/supervisord -c /etc/supervisord.conf
