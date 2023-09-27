@@ -53,6 +53,7 @@ RUN cp docker/nginx.conf /etc/nginx/sites-enabled/default
 # PHP Error Log Files
 RUN mkdir /var/log/php
 RUN touch /var/log/php/errors.log && chmod 777 /var/log/php/errors.log
+RUN touch /var/www/storage/logs/laravel.log && chmod 777 /var/www/storage/logs/laravel.log 
 
 # Deployment steps
 RUN composer install 
