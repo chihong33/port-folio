@@ -102,6 +102,7 @@
                         <img 
                             data-te-lazy-load-init
                             data-te-lazy-offset="500"
+                            data-te-lazy-delay="2000"
                             data-te-lazy-placeholder="https://place-hold.it/375x500?text=Loading" 
                             data-te-lazy-src="{{$selfie_image}}" 
                             alt="hero" class="h-[500px] lg:ml-auto rounded-tl-3xl" />

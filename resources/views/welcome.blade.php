@@ -112,7 +112,7 @@
             height: 40px;
             padding: 9px 0;
             top: calc(50% - 15px);
-            background: #F6D155;
+            background: #ffbc00;
             border: 2px solid #000000;
             border-radius: 40px;
             text-align: center;
@@ -131,7 +131,7 @@
 
         .timeline-container .content {
             padding: 30px 90px 30px 30px;
-            background: #F6D155;
+            background: #ffbc00;
             position: relative;
             border-radius: 0 500px 500px 0;
         }
