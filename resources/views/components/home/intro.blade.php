@@ -18,9 +18,8 @@
                     <p class="text-base mb-8 text-white max-w-[480px]">
                         {{$introduction}}
                     </p>
-                    <ul class="flex flex-wrap items-center">
-                        <li>
-                            <a href="{{$resume_link}}" target="_blank" class="
+                    <div class="flex justify-around">
+                        <a href="{{$resume_link}}" target="_blank" class="
                                 py-4
                                 px-6
                                 sm:px-10
@@ -35,18 +34,43 @@
                                 transition 
                                 hover:scale-[1.1] ease-linear duration-100
                                 ">
-                                <span class="mr-2">
-                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="11" cy="11" r="11" fill="#3056D3" />
-                                        <rect x="6.90906" y="13.3636" width="8.18182" height="1.63636" fill="white" />
-                                        <rect x="10.1818" y="6" width="1.63636" height="4.09091" fill="white" />
-                                        <path d="M11 12.5454L13.8343 9.47726H8.16576L11 12.5454Z" fill="white" />
-                                    </svg>
-                                </span>
-                                Download my resume
-                            </a>
-                        </li>
-                    </ul>
+                            <span class="mr-2">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11" cy="11" r="11" fill="#3056D3" />
+                                    <rect x="6.90906" y="13.3636" width="8.18182" height="1.63636" fill="white" />
+                                    <rect x="10.1818" y="6" width="1.63636" height="4.09091" fill="white" />
+                                    <path d="M11 12.5454L13.8343 9.47726H8.16576L11 12.5454Z" fill="white" />
+                                </svg>
+                            </span>
+                            Download my resume
+                        </a>
+
+                        <a href="{{$cv_link}}" target="_blank" class="
+                                py-4
+                                px-6
+                                sm:px-10
+                                lg:px-8
+                                xl:px-10
+                                inline-flex
+                                items-center
+                                justify-center
+                                text-center text-base
+                                font-normal
+                                text-white
+                                transition 
+                                hover:scale-[1.1] ease-linear duration-100
+                                ">
+                            <span class="mr-2">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11" cy="11" r="11" fill="#3056D3" />
+                                    <rect x="6.90906" y="13.3636" width="8.18182" height="1.63636" fill="white" />
+                                    <rect x="10.1818" y="6" width="1.63636" height="4.09091" fill="white" />
+                                    <path d="M11 12.5454L13.8343 9.47726H8.16576L11 12.5454Z" fill="white" />
+                                </svg>
+                            </span>
+                            Download my CV
+                        </a>
+                    </div>
                     <div class="clients pt-16">
                         <h6 class="
                             font-normal
@@ -61,11 +85,11 @@
                         </h6>
                         <div class="flex items-center">
                             @foreach ($company_list as $company)
-                                <div class="w-full py-3 mr-4 text-black">                                       
-                                    <a href="{{$company['link']}}" target="_blank">
-                                        <img src="{{asset($company['image'])}}" />
-                                    </a>
-                                </div>
+                            <div class="w-full py-3 mr-4 text-black">
+                                <a href="{{$company['link']}}" target="_blank">
+                                    <img src="{{asset($company['image'])}}" />
+                                </a>
+                            </div>
                             @endforeach
                         </div>
                     </div>
@@ -75,7 +99,12 @@
             <div class="w-full lg:w-6/12 px-4">
                 <div class="lg:text-right lg:ml-auto">
                     <div class="relative inline-block z-10 pt-11 lg:pt-0">
-                        <img src="{{asset($selfie_image)}}" alt="hero" class="h-[500px] lg:ml-auto rounded-tl-3xl" />
+                        <img 
+                            data-te-lazy-load-init
+                            data-te-lazy-offset="500"
+                            data-te-lazy-placeholder="https://place-hold.it/375x500?text=Loading" 
+                            data-te-lazy-src="{{$selfie_image}}" 
+                            alt="hero" class="h-[500px] lg:ml-auto rounded-tl-3xl" />
                         <span class="absolute -left-8 -bottom-8 z-[-1]">
                             <svg width="93" height="93" viewBox="0 0 93 93" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="2.5" cy="2.5" r="2.5" fill="#3056D3" />

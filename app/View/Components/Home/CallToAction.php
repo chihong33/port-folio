@@ -32,6 +32,10 @@ class callToAction extends Component
             ['img_src' => 'img/skills/adobe_photoshop.png', 'label'=>'Adobe Photoshop', 'class' => 'rounded-full e ', 'width' => "50", 'height' => "50"],
             ['img_src' => 'img/skills/adobe_xd.png', 'label'=>'Adobe XD', 'class' => 'rounded-full  ', 'width' => "50", 'height' => "50"],
             ['img_src' => 'img/skills/adobe_premier_pro.png', 'label'=>'Adobe Premier Pro', 'class' => 'rounded-full  ', 'width' => "50", 'height' => "50"],
+            ['img_src' => 'img/skills/flutter.svg', 'label'=>'Flutter', 'class' => 'rounded-full  ', 'width' => "50", 'height' => "50"],
+            ['img_src' => 'img/skills/docker.svg', 'label'=>'Docker', 'class' => 'rounded-full  ', 'width' => "50", 'height' => "50"],
+            ['img_src' => 'img/skills/tailwind.jpg', 'label'=>'Tailwind', 'class' => 'rounded-full  ', 'width' => "50", 'height' => "50"],
+            ['img_src' => 'img/skills/git.png', 'label'=>'Git', 'class' => 'rounded-full  ', 'width' => "50", 'height' => "50"],
         ];
         //
     }

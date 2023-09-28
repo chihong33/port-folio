@@ -8652,7 +8652,8 @@ function LoadingImagePlaceholder() {
 }
 (0,tw_elements__WEBPACK_IMPORTED_MODULE_3__.initTE)({
   Modal: tw_elements__WEBPACK_IMPORTED_MODULE_3__.Modal,
-  SmoothScroll: tw_elements__WEBPACK_IMPORTED_MODULE_3__.SmoothScroll
+  SmoothScroll: tw_elements__WEBPACK_IMPORTED_MODULE_3__.SmoothScroll,
+  LazyLoad: tw_elements__WEBPACK_IMPORTED_MODULE_3__.LazyLoad
 });
 var myModal = new tw_elements__WEBPACK_IMPORTED_MODULE_3__.Modal(document.getElementById("projectDetailModal"));
 jquery__WEBPACK_IMPORTED_MODULE_2___default()('.project-modal').on('click', function () {

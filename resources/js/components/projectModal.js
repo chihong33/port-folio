@@ -10,6 +10,7 @@ import {
     PerfectScrollbar,
     SmoothScroll,
     Popover,
+    LazyLoad,
 } from "tw-elements";
 
 
@@ -342,7 +343,7 @@ export function LoadingImagePlaceholder() {
     );
 }
 
-initTE({ Modal, SmoothScroll });
+initTE({ Modal, SmoothScroll, LazyLoad });
 const myModal = new Modal(document.getElementById("projectDetailModal"));
 
 

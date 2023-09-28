@@ -2,8 +2,18 @@
   <div class="mx-auto mb-10 w-full max-w-[370px] h-auto">
     <div class="relative overflow-hidden rounded-lg h-[350px]">
       <!-- blurred base image as placeholder if the original image is too small -->
-      <img src="{{ Storage::url($image_arr[0]) }}" alt="image" class="blur-lg w-full h-[350px]" />
-      <img src="{{ Storage::url($image_arr[0]) }}" alt="image" class="absolute left-0 right-0 top-0 bottom-0 m-auto w-fulls z-10" />
+      <img 
+        data-te-lazy-load-init
+        data-te-lazy-offset="500"
+        data-te-lazy-placeholder="https://place-hold.it/375x350?text=Loading" 
+        data-te-lazy-src="{{ Storage::url($image_arr[0]) }}" 
+        alt="image" class="blur-lg w-full h-[350px]" />
+      <img 
+        data-te-lazy-load-init
+        data-te-lazy-offset="500"
+        data-te-lazy-placeholder="https://place-hold.it/375x350?text=Loading" 
+        data-te-lazy-src="{{ Storage::url($image_arr[0]) }}"
+        alt="image" class="absolute left-0 right-0 top-0 bottom-0 m-auto w-fulls z-10" />
     </div>
   </div>
   <div class="absolute bottom-16 left-0 right-0 w-3/4 text-center z-500 m-auto z-[100]">

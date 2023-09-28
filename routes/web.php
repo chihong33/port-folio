@@ -25,6 +25,11 @@ Route::get('/download_resume', function () {
         'content-type'=>'application/pdf',
     ]);
 });
+Route::get('/download_cv', function () {
+    return response()->make(file_get_contents(public_path('pdf/cv.pdf')), 200, [
+        'content-type'=>'application/pdf',
+    ]);
+});
 
 Auth::routes();
 
