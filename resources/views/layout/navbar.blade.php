@@ -1,6 +1,6 @@
 <!-- Navbar section  -->
 <div>
-    <header x-data="{navbarOpen: false}" class="fixed left-0 top-0 z-50 bg-white w-full flex items-center shadow-md dark:bg-slate-900 h-24">
+    <header x-data="{navbarOpen: false}" class="fixed left-0 top-0 z-[10000] bg-white w-full flex items-center shadow-md dark:bg-slate-900 h-24">
         <div class="container">
             <div class="flex -mx-4 items-center justify-between relative">
                 <!-- <div class="pr-4 w-60 max-w-full">
